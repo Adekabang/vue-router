@@ -45,4 +45,14 @@ img {
 .active-class {
   color: #ab26ab;
 }
+
+a {
+  color: #ab26ab;	  color: lightseagreen;
+  text-decoration: none;
+}
+
+a:hover,
+a:visited {
+  text-decoration: underline;
+}
 </style>
