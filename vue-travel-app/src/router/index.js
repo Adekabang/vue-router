@@ -1,15 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Brazil from "../views/Brazil.vue";
-import Panama from "../views/Panama.vue";
-import Jamaica from "../views/Jamaica.vue";
-import Hawaii from "../views/Hawaii.vue";
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: "/",
     name: "Home",
     component: Home
@@ -21,27 +16,27 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+      import( /* webpackChunkName: "about" */ "../views/About.vue")
   },
   {
     path: "/brazil",
     name: "Brazil",
-    component: Brazil
+    component: () => import( /* webpackChunkName: "brazil" */ "../views/Brazil")
   },
   {
     path: "/panama",
     name: "Panama",
-    component: Panama
+    component: () => import( /* webpackChunkName: "panama" */ "../views/Panama")
   },
   {
     path: "/hawaii",
     name: "Hawaii",
-    component: Hawaii
+    component: () => import( /* webpackChunkName: "hawaii" */ "../views/Hawaii")
   },
   {
     path: "/jamaica",
     name: "Jamaica",
-    component: Jamaica
+    component: () => import( /* webpackChunkName: "jamaica" */ "../views/Jamaica")
   }
 ];
 
