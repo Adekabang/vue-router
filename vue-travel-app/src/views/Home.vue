@@ -42,4 +42,7 @@ img {
   display: flex;
   justify-content: space-between;
 }
+.active-class {
+  color: #ab26ab;
+}
 </style>

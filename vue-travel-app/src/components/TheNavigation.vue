@@ -26,6 +26,6 @@ export default {};
 }
 
 #nav a.active-class {
-  color: #8d2197;
+  color: #ab26ab;
 }
 </style>
