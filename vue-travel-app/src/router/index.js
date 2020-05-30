@@ -7,16 +7,19 @@ Vue.use(VueRouter);
 const routes = [{
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
+    props: true
   },
   {
-    path: "/details/:id",
+    path: "/details/:slug",
     name: "DestinationDetails",
+    props: true,
     component: () => import( /* webpackChunkName: "DestinationDetails" */ "../views/DestinationDetails")
   }
 ];
 
 const router = new VueRouter({
+  mode: "history",
   linkExactActiveClass: "active-class",
   routes
 });
